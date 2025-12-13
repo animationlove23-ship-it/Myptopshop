@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Online Shop</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f7f7f7; margin:0; padding:0; }
+    header { background: #ff6f61; color: white; text-align: center; padding: 20px; }
+    .products { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px; }
+    .product { background: white; padding: 10px; border-radius: 8px; text-align: center; }
+    .product img { width: 100%; border-radius: 8px; }
+    .qr-section { margin-top: 10px; }
+    .qr-section img { width: 80px; margin: 5px; cursor: pointer; }
+    footer { text-align:center; padding:10px; background:#eee; margin-top:20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>My Online Shop</h1>
+</header>
+
+<div class="products">
+  <div class="product">
+    <h2>Product 1</h2>
+    <img src="https://via.placeholder.com/150" alt="Product 1">
+    <div class="qr-section">
+      <p>Pay with:</p>
+      <img src="wave_qr_1.png" alt="Wave Pay">
+      <img src="kpay_qr_1.png" alt="KPay">
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 My Online Shop
+</footer>
+
+</body>
+</html>
