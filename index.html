@@ -141,32 +141,20 @@ footer {
 
 <p>ငွေလက်ခံမည့်သင့်wave/Kpay Number:</p>
 <input type="tel" placeholder="09xxxxxxxx">
-
-  <button onclick="sendOrder()">Order Now</button>
+<button onclick="sendOrder()">Order Now</button>
 
 <script>
 function sendOrder() {
+  const text = encodeURIComponent("🛒 Order အသစ်ဝင်ပါတယ်\nProduct: T-Shirt\nQty: 1");
   const token = "API:
-8454320819:AAE8XB8J69TFeiZrHlWazPCtV4cA_JIM2yQ";
+8454320819:AAE8XB8J69TFeiZrHlWazPCtV4cA_JIM2yQ;
   const chatId = "7549405923";
-  const text = "🛒 Order အသစ်ဝင်ပါတယ်!\nProduct: T-Shirt\nQty: 1";
 
-  const url = `https://api.telegram.org/bot${token}/sendMessage`;
-
-  fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: text
-    })
-  });
-
-  alert("Order ပို့ပြီးပါပြီ ✅");
+  const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`;
+  window.open(url, "_blank");
 }
 </script>
 
-</a>
   </div>
 </div>
   
