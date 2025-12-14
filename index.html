@@ -99,7 +99,12 @@ footer {
   margin: 5px 0;
 }
 
-</head></style>
+</head><script>
+document.getElementById('orderBtn').addEventListener('click', function() {
+    document.getElementById('checkMark').style.display = 'inline';
+});
+</script>
+</style>
 
 <body>
 
@@ -141,9 +146,8 @@ footer {
 
 <p>ငွေလက်ခံမည့်သင့်wave/Kpay Number:</p>
 <input type="tel" placeholder="09xxxxxxxx">
-<a href="https://t.me/@paytopayoffical07" class="order-btn">
-  Order Now
-</a>
+<button id="orderBtn">Order</button>
+<span id="checkMark" style="display:none;">✔️ အမှာစာထည့်ပြီးပြီ</span>
 
   </div>
 </div>
