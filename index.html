@@ -100,31 +100,7 @@ footer {
 }
 
 </head><script>
-<script>
-const botToken = "8563273429:AAEgLMDOwjv7JSW14jRZf_nLdNRraAZDFtM";  // 
-const chatId = "7549405923";      // 
 
-//
-document.querySelectorAll("order-Btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-        // data-product / data-price attribute မရှိရင် innerText သုံး
-        const product = btn.getAttribute("data-product") || btn.innerText;
-        const price = btn.getAttribute("data-price") || "N/A";
-
-        const message = `New Order!\nProduct: ${product}\nPrice: ${price}`;
-
-        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ chat_id: chatId, text: message })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data.ok) alert("Order sent to Telegram!");
-            else alert("Failed to send order.");
-        });
-    });
-});
 </script>
 
 });
@@ -176,9 +152,10 @@ document.querySelectorAll("order-Btn").forEach(btn => {
     (Transaction ID):</label>
   <input type="text" id="payment" name="payment" placeholder="Transaction ID ထည့်ပါ" required>
 
-<a href="https://t.me/@paytopayoffical07" class="order-btn">
+<a href="https://t.me/@paytopayoffical07?start=Product1" class="order-btn" target="_blank">
   Order Now
 </a>
+
 </form>
 
 </form>
