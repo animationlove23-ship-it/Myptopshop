@@ -139,22 +139,14 @@ footer {
       <img src="IMG_5396.png" alt="KPay">
     </div>
 
-<p>ငွေလွှဲပြေစာတင်သွင်းရန်နေရာ👇🏿:</p>
-<input type="file" accept="image/*">
-
-<p>ငွေလက်ခံမည့်သင့်wave/Kpay Name:</p>
-<input type="text" placeholder="Enter your name">
-
-<p>ငွေလက်ခံမည့်သင့်wave/Kpay Number:</p>
-<input type="tel" placeholder="09xxxxxxxx">
-  <form action="#" method="post">
-  <label for="payment">ငွေလွှဲid6လုံး
-    (Transaction ID):</label>
-  <input type="text" id="payment" name="payment" placeholder="Transaction ID ထည့်ပါ" required>
-
-<a href="https://t.me/@paytopayoffical07?start=Product1" class="order-btn" target="_blank">
-  Order Now
-</a>
+  <div class="inputs">
+    <input type="text" placeholder="Customer Name" class="input-field">
+    <input type="tel" placeholder="Phone Number" class="input-field">
+    <input type="text" placeholder="Payment ID (6 လုံး)" maxlength="6" class="input-field">
+    <input type="file" class="input-field" accept="image/*">
+  </div>
+  <button disabled onclick="order('Product D', this, '25,000 MMK', 'productD.png')">Order</button>
+</div>
 
 </form>
 
