@@ -100,8 +100,33 @@ footer {
 }
 
 </head><script>
-document.getElementById('orderBtn').addEventListener('click', function() {
-    document.getElementById('checkMark').style.display = 'inline';
+<script>
+const botToken = "8563273429:AAEgLMDOwjv7JSW14jRZf_nLdNRraAZDFtM";  // 
+const chatId = "7549405923";      // 
+
+//
+document.querySelectorAll("order-Btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        // data-product / data-price attribute မရှိရင် innerText သုံး
+        const product = btn.getAttribute("data-product") || btn.innerText;
+        const price = btn.getAttribute("data-price") || "N/A";
+
+        const message = `New Order!\nProduct: ${product}\nPrice: ${price}`;
+
+        fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chat_id: chatId, text: message })
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.ok) alert("Order sent to Telegram!");
+            else alert("Failed to send order.");
+        });
+    });
+});
+</script>
+
 });
 </script>
 </style>
